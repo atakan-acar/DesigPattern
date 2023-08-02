@@ -1,1 +1,6 @@
-﻿Console.Write("Design Patterns...");
+﻿using DesignPattern.Explore.Structural.Adapter;
+
+Adaptee adapt = new Adaptee();
+ITarget target = new Adapter(adapt);
+
+adapt.SetSpesificHeader();

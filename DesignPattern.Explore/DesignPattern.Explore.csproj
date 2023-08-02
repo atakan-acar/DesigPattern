@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Behavioar\" />
-    <Folder Include="Structural\" />
   </ItemGroup>
 
 </Project>
