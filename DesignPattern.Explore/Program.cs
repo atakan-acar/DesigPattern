@@ -3,4 +3,5 @@
 Adaptee adapt = new Adaptee();
 ITarget target = new Adapter(adapt);
 
-adapt.SetSpesificHeader();
+target.Request();
+
