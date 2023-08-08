@@ -1,7 +1,6 @@
 ﻿using DesignPattern.Explore.Structural.Adapter;
+using DesignPattern.Explore.Structural.Facade;
 
-Adaptee adapt = new Adaptee();
-ITarget target = new Adapter(adapt);
+Operation opt = new Operation();
 
-target.Request();
-
+opt.StartOperation();
