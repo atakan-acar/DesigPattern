@@ -1,15 +1,7 @@
-﻿using DesignPattern.Explore.Structural.FlyWeight;
+﻿using DesignPattern.Explore.Structural.Bridge;
 
+IColor color = new RedColor();
 
-// Flyweight Factory oluştur
-EnemyFactory enemyFactory = new EnemyFactory();
+Shape redCircle = new Circle(color);
 
-// Oyun oluştur
-Game game = new Game();
-game.SpawnEnemy(10, 5, enemyFactory.GetEnemy("Soldier", ConsoleColor.Green));
-game.SpawnEnemy(20, 8, enemyFactory.GetEnemy("Soldier", ConsoleColor.Green));
-game.SpawnEnemy(15, 3, enemyFactory.GetEnemy("Sniper", ConsoleColor.Red));
-game.SpawnEnemy(25, 6, enemyFactory.GetEnemy("Sniper", ConsoleColor.Red));
-
-// Düşmanları görüntüle
-game.DisplayEnemies();
+redCircle.Draw();
