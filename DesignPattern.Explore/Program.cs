@@ -1,7 +1,15 @@
-﻿using DesignPattern.Explore.Structural.Bridge;
+﻿using DesignPattern.Explore.Behavioar.Mediator;
+using DesignPattern.Explore.Behavioar.Mediator.Concrete;
+IChatMediator mediator = new ChatMediator();
 
-IColor color = new RedColor();
+User user = new User(mediator, "Atakan");
+User user2 = new User(mediator, "Ayşe");
+User user3 = new User(mediator, "Charlie");
 
-Shape redCircle = new Circle(color);
+mediator.AddUser(user);
+mediator.AddUser(user2);
+mediator.AddUser(user3);
 
-redCircle.Draw();
+user.Send("Hi Ayse");
+user2.Send("Hi Charlie");
+user3.Send("Hi Atakan");
